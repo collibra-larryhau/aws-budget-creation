@@ -23,7 +23,7 @@ Budget_Name,Accounts,1722470400,1725148800,1727740800,1730419200,1733011200,1735
 
 - **Budget_Name**: The name of the budget. Account names cannot exceed 100 characters.
 - **Accounts**: A comma-separated list of account numbers (12 digits each).
-- **Epoch Time Columns**: Unix timestamps representing the first of each month for which the budget is planned. The amounts are specified in USD.
+- **Epoch Time Columns**: Unix timestamps representing the first of each month for which the budget is planned. The amounts are specified in USD.  If you don't know what Unix epoch timestamps are, please read up: https://www.epochconverter.com/
 
 ## Instructions
 
@@ -54,7 +54,7 @@ Budget_Name,Accounts,1722470400,1725148800,1727740800,1730419200,1733011200,1735
 - **DuplicateRecordException**: This error occurs if a budget with the same name already exists. Modify the budget name in the CSV to create a new budget.
 - **Parameter validation failed**: This error can occur if:
   - The budget name is empty or exceeds 100 characters.
-  - The account numbers are not exactly 12 digits.
+  - The account numbers are not *exactly* 12 digits.
   - Extra lines are present in the CSV file. Remove any extra lines to avoid this error.
 
 ### Example Error Message
